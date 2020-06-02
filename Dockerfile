@@ -8,4 +8,5 @@ RUN stack build --only-dependencies
 COPY . /work/
 RUN stack build && stack install
 
-CMD delete-execution-records-exe -p $PORT
+# CMD delete-execution-records-exe -p $PORT
+CMD delete-execution-records-exe

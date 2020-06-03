@@ -1,5 +1,9 @@
 FROM haskell:8.8.3
 
+RUN apt-get update
+RUN apt-get upgrade -y --assume-yes
+RUN apt-get install -y --assume-yes libpq-dev
+
 WORKDIR /work
 
 COPY stack.yaml delete-execution-records.cabal /work/

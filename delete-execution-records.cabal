@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 80c38061a7740d34f7319e6504f634f4af4b27a41b41a97f7294d5f5d87c454b
+-- hash: fab77e0dbe39ecf94b3c3be863acfb8da2055c56225571542777cd799762bdec
 
 name:           delete-execution-records
 version:        0.1.0.0
@@ -34,6 +34,9 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , postgresql-simple
+    , time
+    , utf8-string
   default-language: Haskell2010
 
 executable delete-execution-records-exe
@@ -46,6 +49,9 @@ executable delete-execution-records-exe
   build-depends:
       base >=4.7 && <5
     , delete-execution-records
+    , postgresql-simple
+    , time
+    , utf8-string
   default-language: Haskell2010
 
 test-suite delete-execution-records-test
@@ -59,4 +65,7 @@ test-suite delete-execution-records-test
   build-depends:
       base >=4.7 && <5
     , delete-execution-records
+    , postgresql-simple
+    , time
+    , utf8-string
   default-language: Haskell2010

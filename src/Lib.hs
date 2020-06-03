@@ -2,5 +2,10 @@ module Lib
     ( someFunc
     ) where
 
+import System.Environment
+
 someFunc :: IO ()
-someFunc = putStrLn "someFunc123"
+someFunc = do
+  databaseUrl <- getEnv "DATABASE_URL"
+  putStrLn databaseUrl
+

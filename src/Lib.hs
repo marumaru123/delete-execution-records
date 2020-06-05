@@ -64,5 +64,6 @@ someFunc = do
   let t = addUTCTime nominalDay1 utcTime
   timeZone <- getCurrentTimeZone
   let t2 = utcToZonedTime timeZone t
-  --print t2
+  print t2
+  print "a"
   deleteData t2
